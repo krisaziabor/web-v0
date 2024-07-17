@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import "./globals.css"
-import { EyeClosedIcon, EyeOpenIcon, ArrowTopRightIcon } from '@radix-ui/react-icons';
+import { EyeClosedIcon, EyeOpenIcon } from '@radix-ui/react-icons';
 import Bio from './components/radix/collapsible'
 import localFont from 'next/font/local'
 
