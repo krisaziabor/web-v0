@@ -31,15 +31,15 @@ const editorialNew = localFont({
     ],
 })
 
-const neueMontreal = localFont({
-  src: [
-      {
-          path: './fonts/neue-montreal/woff2/PPNeueMontreal-Medium.woff2',
-          weight: '500',
-          style: 'normal',
-      },
-  ]
-})
+// const neueMontreal = localFont({
+//   src: [
+//       {
+//           path: './fonts/neue-montreal/woff2/PPNeueMontreal-Medium.woff2',
+//           weight: '500',
+//           style: 'normal',
+//       },
+//   ]
+// })
 
 const pangramSans = localFont({
   src: [
@@ -70,34 +70,6 @@ const pangramSans = localFont({
     }
   ]
 })
-
-function getESTTime() {
-  const date = new Date();
-  const offset = date.getTimezoneOffset();
-  const hours_Offset = offset / 60;
-  const est_Offset = -4; // this does consider daylight-savings time – may need to be adjusted in future
-  const est_hours = hours_Offset + est_Offset;
-  const estTime = new Date(date.getTime() + est_hours * 60 * 60 * 1000);
-  return estTime.toLocaleTimeString();
-}
-
-function Time() {
-  const [time, setTime] = React.useState('');
-
-  React.useEffect(() => {
-    setTime(getESTTime());
-    const interval = setInterval(() => {
-      setTime(getESTTime());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  if (time === '') {
-    return null;
-  }
-
-  return `${time} – EST`;
-}
 
 function BL({ open, handleTrigger }: { open: boolean, handleTrigger: () => void }) {
   return (

@@ -48,15 +48,6 @@
     margin-right: 3em; /* Add some right margin */
   }
 
-  .h1-blind {
-    @apply text-xl;
-    color: #D03129;
-    -webkit-user-select: none;  
-    -moz-user-select: none;   
-    -ms-user-select: none;      
-    user-select: none;          
-  }
-
   h2 {
     @apply absolute;
     top: 50%;
@@ -71,18 +62,6 @@
     width: 30%; /* Adjust this to the point you want the text to stop */
     word-wrap: break-word; /* Break the word at the end of the line */
     overflow-wrap: break-word; /* Break the word at the end of the line */
-  }
-
-  h3 {
-
-    @apply absolute top-4 right-4;
-    width: 15%;
-    @apply text-justify;
-    @apply text-2xl;
-    
-    /* apply color: EEE5D9; */
-    color: #D03129;
-    line-height: 1.5; /* Set line height */
   }
 }
 
@@ -107,13 +86,6 @@
 
 .off-color {
   background-color: #D03129;
-}
-
-.icon-top-right {
-  @apply relative;
-  color: #D03129;
-  transform: scale(2.5);
-  display: inline-block;
 }
 
 .etymology {
