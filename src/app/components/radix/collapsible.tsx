@@ -41,7 +41,7 @@ function Bio() {
       <br></br>
       <br></br>
       As is the case for all my other work, this website is perpetually in progress.
-      While this website is <div style={{ textDecoration: 'underline', display: 'inline'}}>under renovation</div>, you can access his <em><a href="https://www.linkedin.com/in/krisaziabor/">Linkedin</a></em>, <em><a href="https://read.cv/krisaziabor">CV</a></em>, and <em><a href="https://github.com/krisaziabor/">Github</a></em>.
+      While this website is <div style={{ textDecoration: 'underline', display: 'inline'}}>under renovation</div>, you can access my <em><a href="https://www.linkedin.com/in/krisaziabor/">Linkedin</a></em>, <em><a href="https://read.cv/krisaziabor">CV</a></em>, and <em><a href="https://github.com/krisaziabor/">Github</a></em>.
     </h2>
   );
 }
