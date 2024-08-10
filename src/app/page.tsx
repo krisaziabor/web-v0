@@ -84,6 +84,33 @@ function BL({ open, handleTrigger }: { open: boolean, handleTrigger: () => void 
   );
 }
 
+
+function Text(){
+  return (
+    <div>
+      <div className='top-right'>
+      UNDER RENOVATION
+      </div>
+      
+      <div className='middle-right'>
+          CV
+          <br></br>
+          GITHUB
+          <br></br>
+          CONTACT
+      </div>
+      
+        <div className='bottom-right'>
+          UNTITLED,
+          <br></br>
+          POP-UP #01
+        </div>
+      
+    </div>
+  )
+}
+
+
 export default function Home() {
   const [open, setOpen] = useState(false);
 
