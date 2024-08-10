@@ -87,17 +87,19 @@ function BL({ open, handleTrigger }: { open: boolean, handleTrigger: () => void 
 
 function Text(){
   return (
-    <div>
+    <div className='container'>
       <div className='top-right'>
-      UNDER RENOVATION
+      UNDER
+      <br></br>
+      RENOVATION
       </div>
       
       <div className='middle-right'>
-          CV
+          CONTACT
           <br></br>
           GITHUB
           <br></br>
-          CONTACT
+          CV
       </div>
       
         <div className='bottom-right'>
@@ -112,20 +114,21 @@ function Text(){
 
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const handleTrigger = () => {
-    setOpen(!open);
-  };
+  // const handleTrigger = () => {
+  //   setOpen(!open);
+  // };
 
-  return (
-    <main className={`${open ? 'on-color' : 'off-color'} ${editorialNew.className}`}>
-      <div>
-        <div className={`${pangramSans.className}`}>
-          <BL open={open} handleTrigger={handleTrigger}/>
-        </div>
-        {open && <Bio />}
-      </div>
-    </main>
-  );
+  // return (
+  //   <main className={`${open ? 'on-color' : 'off-color'} ${editorialNew.className}`}>
+  //     <div>
+  //       <div className={`${pangramSans.className}`}>
+  //         <BL open={open} handleTrigger={handleTrigger}/>
+  //       </div>
+  //       {open && <Bio />}
+  //     </div>
+  //   </main>
+  // );
+  return Text()
 }

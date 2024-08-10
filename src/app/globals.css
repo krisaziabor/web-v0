@@ -1,93 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '@radix-ui/colors/black-alpha.css';
-@import '@radix-ui/colors/mauve.css';
-@import '@radix-ui/colors/red.css';
-@import '@radix-ui/colors/violet.css';
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-@layer components {
-  main {
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Arrange children vertically */
-    align-items: flex-start; /* Align items at the start (left) */
-    padding: 1em; /* Add padding */
-    height: 100vh; /* Take full height of the viewport */
-    background-color: #D03129; /* Background color */
-  }
-
-  h1 {
-    @apply absolute;
-    top: 50%;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
     right: 0;
-    transform: translateY(-50%);
-    @apply text-3xl;
-    @apply text-left;
-    color: #FEFDFD;
-    line-height: 1.5;
-    margin-right: 3em; /* Add some right margin */
-  }
-
-  .h1-alt {
-    @apply absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    @apply text-gray-100;
-    @apply text-3xl;
-    @apply text-left;
-    /* apply color: EEE5D9; */
-    color: #D03129;
-    line-height: 1.75; /* Set line height */
-    margin-right: 3em; /* Add some right margin */
-  }
-
-  h2 {
-    @apply absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    margin-left: 3em; /* Add some left margin */
-    color: #D03129;
-    @apply text-2xl;
-    @apply text-right;
-    @apply text-justify;
-    margin-bottom: 1em; /* Add some bottom margin */
-    width: 30%; /* Adjust this to the point you want the text to stop */
-    word-wrap: break-word; /* Break the word at the end of the line */
-    overflow-wrap: break-word; /* Break the word at the end of the line */
-  }
+    padding: 20px;
+    height: 100vh;
 }
 
-.icon-bottom-right, .icon-bottom-right-alt {
-  position: absolute;
-  top: 57.5%;
-  right: 17.2%;
-  transform: translateY(-50%) scale(1.5);
+.top-right, .middle-right, .bottom-right {
+    align-self: flex-start;
+    text-align: left;
+    margin: 0;
+    padding: 10px 0;
+    flex: 0 0 auto;
 }
 
-.icon-bottom-right {
-  color: #FEFDFD;
-}
-
-.icon-bottom-right-alt {
-  color: #D03129;
-}
-
-.on-color {
-  background-color: #FEFDFD;
-}
-
-.off-color {
-  background-color: #D03129;
-}
-
-.etymology {
-  color: #147641;
-}
