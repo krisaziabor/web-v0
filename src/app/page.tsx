@@ -1,134 +1,61 @@
-'use client'
-
-import React, { useState } from 'react';
+import React from 'react';
 import "./globals.css"
-import { EyeClosedIcon, EyeOpenIcon } from '@radix-ui/react-icons';
-import Bio from './components/radix/collapsible'
-import localFont from 'next/font/local'
-
-const editorialNew = localFont({
-    src: [
-        {
-            path: './fonts/editorial-new/woff2/PPEditorialNew-Regular.woff2',
-            weight: '500',
-            style: 'normal',
-        },
-        {
-            path: './fonts/editorial-new/woff2/PPEditorialNew-Italic.woff2',
-            weight: '400',
-            style: 'italic',
-        },
-        {
-            path: './fonts/editorial-new/woff2/PPEditorialNew-Bold.woff2',
-            weight: '700',
-            style: 'normal',
-        },
-        {
-            path: './fonts/editorial-new/woff2/PPEditorialNew-BoldItalic.woff2',
-            weight: '700',
-            style: 'italic',
-        },
-    ],
-})
-
-const pangramSans = localFont({
-  src: [
-    {
-      path: './fonts/pangram-sans/woff2/PPPangramSans-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './fonts/pangram-sans/woff2/PPPangramSans-CompactBold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './fonts/pangram-sans/woff2/PPPangramSans-CompactBoldItalic.woff2',
-      weight: '700',
-      style: 'italic',
-    },
-    {
-      path: './fonts/pangram-sans/woff2/PPPangramSans-Semibold.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: './fonts/pangram-sans/woff2/PPPangramSans-Medium.woff2',
-      weight: '500',
-      style: 'normal',      
-    }
-  ]
-})
-
-function BL({ open, handleTrigger }: { open: boolean, handleTrigger: () => void }) {
-  return (
-    <div>
-      {open ? (
-        <h1 className='h1-alt'>
-          COMING SOON
-          <br></br>
-        </h1>
-      ) : (
-        <h1>
-          COMING SOON
-          <br></br>
-        </h1>
-      )}
-      <div className={open? 'icon icon-bottom-right-alt' : `icon icon-bottom-right`}>
-        <button onClick={handleTrigger}>
-          {open ? <EyeOpenIcon /> : <EyeClosedIcon />}
-        </button>
-      </div>
-    </div>
-  );
-}
-
+import { pangramSans, editorialNew } from './fonts';
+import Image from 'next/image';
 
 function Text(){
   return (
-    <div className='container'>
-      <div className='top-right'>
-      UNDER
-      <br></br>
-      RENOVATION
-      </div>
+    <div className='text-container'>
+        
+        <div className={`${pangramSans.className} top-right`}>
+          UNDER
+          <br></br>
+          RENOVATION
+        </div>
+        
+          
+        <div className= {`${pangramSans.className} middle-right`}>
+            <a href="mailto:kris.aziabor@yale.edu">CONTACT</a>
+            <br></br>
+            <a href="https://github.com/krisaziabor">GITHUB</a>
+            <br></br>
+            <a href="https://read.cv/krisaziabor">CV</a>
+        </div>
       
-      <div className='middle-right'>
-          CONTACT
-          <br></br>
-          GITHUB
-          <br></br>
-          CV
-      </div>
+      
+      <div className={`${editorialNew.className}`}>
       
         <div className='bottom-right'>
-          UNTITLED,
+          Untitled,
           <br></br>
-          POP-UP #01
+          Hardy & Taimur (2023)
         </div>
+      </div>
       
     </div>
   )
 }
 
+function Photo(){
+  return (
+    <div className='photo-container'>
+      <Image
+        src="/KRIS–FAMSTYLE–0187.jpg"
+        layout="fill"
+        objectFit="cover"
+        alt="Untitled, Hardy & Taimur cooking (2023)"
+        className="img"
+        />
+      </div>
+  )
+}
+
 
 export default function Home() {
-  // const [open, setOpen] = useState(false);
-
-  // const handleTrigger = () => {
-  //   setOpen(!open);
-  // };
-
-  // return (
-  //   <main className={`${open ? 'on-color' : 'off-color'} ${editorialNew.className}`}>
-  //     <div>
-  //       <div className={`${pangramSans.className}`}>
-  //         <BL open={open} handleTrigger={handleTrigger}/>
-  //       </div>
-  //       {open && <Bio />}
-  //     </div>
-  //   </main>
-  // );
-  return Text()
+  return (
+    <div className="main-page">
+      <Text />
+      <Photo />
+    </div>
+  )
 }

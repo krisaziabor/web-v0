@@ -2,21 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
+body, html {
+    background-color: black;
+    margin: 0;
+    height: 100%;
+}
+
+.main-page {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    right: 0;
-    padding: 20px;
     height: 100vh;
 }
 
-.top-right, .middle-right, .bottom-right {
-    align-self: flex-start;
-    text-align: left;
-    margin: 0;
-    padding: 10px 0;
-    flex: 0 0 auto;
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 20px;
+    padding: 20px;   
 }
 
+.photo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.top-right, .middle-right, .bottom-right {
+    text-align: left;
+    height: 33.33%;
+    align-self: flex-start;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex: 0 0 auto;
+    color:white;
+}
+
+.middle-right {
+    margin: auto 0; /* This will center the middle-right element vertically */
+    line-height: 2em;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
