@@ -8,8 +8,7 @@ export function Text() {
   return (
     <div className='text-container'>
       <div className={`${pangramSans.className} top-right`}>
-        COMING
-        SOON
+        COMING BACK SOON
       </div>
       <div className={`${pangramSans.className} middle-right`}>
         <a href="https://read.cv/krisaziabor">CV</a>
