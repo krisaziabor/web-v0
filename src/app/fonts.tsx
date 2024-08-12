@@ -14,7 +14,7 @@ export const editorialNew = localFont({
         },
         {
             path: './fonts/editorial-new/woff2/PPEditorialNew-Regular.woff2',
-            weight: '500',
+            weight: '400',
             style: 'normal',
         },
         {

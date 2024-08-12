@@ -38,6 +38,7 @@ export function CoverPhoto() {
         fill={true}
         style={{ objectFit: "cover" }}
         alt="Untitled, Hardy & Taimur cooking (2023)"
+        priority={true}
         className="img"
       />
     </div>
