@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <div className="main-page">
       <Text />
+      <div className="spacer"></div>
       <CoverPhoto />
     </div>
   )
