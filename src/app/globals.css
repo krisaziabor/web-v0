@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 body, html {
-    background-color: black;
+    background-color: #C80505;
     margin: 0;
     height: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding: 10%;
 }
 
 

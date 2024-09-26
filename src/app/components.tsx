@@ -8,38 +8,14 @@ export function Text() {
   return (
     <div className='text-container'>
       <div className={`${pangramSans.className} top-right`}>
-        COMING BACK SOON
-      </div>
-      <div className={`${pangramSans.className} middle-right`}>
-        <a href="https://read.cv/krisaziabor">CV</a>
+        ANY AMBITION TO CREATE TIMELESS WORK RENDERS IT LIFELESS.
         <br />
-        <a href="https://github.com/krisaziabor">GITHUB</a>
+        ITS MORTALITY AND REBIRTH WILL ALWAYS BE THE MOST BEAUTIFUL.
         <br />
-        <a href="mailto:kris.aziabor@yale.edu">CONTACT</a>
-
+        KRIS AZIABOR DOT COM, COMING SOON
+        <br />
+        {/* DOWNLOAD PORTFOLIO */}
       </div>
-      <div className={`${editorialNew.className}`}>
-        <div className='bottom-right'>
-          Untitled,
-          <br />
-          Hardy & Taimur (2023)
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export function CoverPhoto() {
-  return (
-    <div className='photo-container'>
-      <Image
-        src={Cover}
-        fill={true}
-        style={{ objectFit: "cover" }}
-        alt="Untitled, Hardy & Taimur cooking (2023)"
-        priority={true}
-        className="img"
-      />
     </div>
   );
 }
