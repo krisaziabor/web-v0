@@ -6,115 +6,55 @@ body, html {
     background-color: #C80505;
     margin: 0;
     height: 100%;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding: 10%;
+    padding: 0%;
 }
 
-
-.main-page {
+body {
     display: flex;
+    align-items: center;
+    justify-content: right;
     height: 100vh;
-    width: 100%;
-    flex-direction: row;
-    
 }
 
 /* TEXT CLASSES */
 
 .text-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     width: 300px; /* Fixed width for the text container */
     position: relative;
-    padding: 20px;
+    padding: 40px;
 }
 
-.top-right, .middle-right, .bottom-right {
+.top-right {
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
-    height: 33.33%;
-    align-self: flex-start;
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    flex: 0 0 auto;
+    align-self: center;
     color:white;
-    /* increasing letter spacing */
     letter-spacing: 0.01em;
-}
-
-.middle-right {
-    margin: auto 0; /* This will center the middle-right element vertically */
-}
-
-.top-right, .middle-right {
     font-size: 1.75em;
-    /* bold font */
     font-weight: 700;
-}
-
-.bottom-right {
-    font-size: 1.5em;
-    font-weight: 200;
-}
-/* PHOTO CLASSES */
-
-.photo-container {
-    flex-grow: 1;
-    position: relative;
-}
-
-.img {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding: 20px;
-}
-
-.spacer {
-    width: 200px;
-    flex-shrink: 0;
+    max-width: 250px;
 }
 
 /* mobile styles */
-@media (max-width: 1024px) {
-    .main-page {
-        flex-direction: column;
-        padding: 10px;
-    }
-    
+@media (max-width: 1023px) {
     .text-container {
-        width: 100%;
-        height: auto;
-        padding-bottom: 10px;
+        width: 90%;
+        max-width: 600px;
+        padding: 20px;
     }
     
-    .photo-container {
-        width: 100%;
-        height: auto;
+    .top-right {
+        font-size: 1.5em;
+        max-width: 300px;
+        padding: 0 20px;
+        text-align: center;
     }
-    
-    .img {
-        width: 100%;
-        object-fit: contain;
-    }
-    
-    .top-right, .middle-right, .bottom-right {
-   
-        width: 100%;
-        flex: none;
-    }
-    
-    .top-right, .middle-right {
-        text-align: right;
-        font-size: 1em;
-    }
-    
-    .bottom-right {
-        font-size: 0.75em;
-    }
-    
 }
