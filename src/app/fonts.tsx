@@ -1,40 +1,5 @@
 import localFont from 'next/font/local'
 
-export const editorialNew = localFont({
-    src: [
-        {
-          path: './fonts/editorial-new/woff2/PPEditorialNew-UltralightItalic.woff2',
-          weight: '200',
-          style: 'italic',
-        },
-        {
-          path: './fonts/editorial-new/woff2/PPEditorialNew-Ultralight.woff2',
-          weight: '200',
-          style: 'normal',
-        },
-        {
-            path: './fonts/editorial-new/woff2/PPEditorialNew-Regular.woff2',
-            weight: '400',
-            style: 'normal',
-        },
-        {
-            path: './fonts/editorial-new/woff2/PPEditorialNew-Italic.woff2',
-            weight: '400',
-            style: 'italic',
-        },
-        {
-            path: './fonts/editorial-new/woff2/PPEditorialNew-Bold.woff2',
-            weight: '700',
-            style: 'normal',
-        },
-        {
-            path: './fonts/editorial-new/woff2/PPEditorialNew-BoldItalic.woff2',
-            weight: '700',
-            style: 'italic',
-        },
-    ],
-})
-
 export const pangramSans = localFont({
   src: [
     {

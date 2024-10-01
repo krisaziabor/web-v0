@@ -44,7 +44,7 @@ body {
 }
 
 /* mobile styles */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     .text-container {
         width: 90%;
         max-width: 600px;

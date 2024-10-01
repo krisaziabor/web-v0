@@ -1,8 +1,8 @@
-import { pangramSans } from './fonts';
+import { pangramSans } from '../fonts';
 import React from 'react';
-import "./globals.css";
+import "../globals.css"
 
-export function Text() {
+export function Hero() {
   return (
     <div className='text-container'>
       <div className={`${pangramSans.className} top-right`}>
