@@ -1,15 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/dist/compiled/@next/font/dist/local";
 
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kris Aziabor",
-  description: "Coming Soon",
-  
+  description: "Coming back soon.",
+  icons: {
+    icon: './icon.ico'
+  },
 };
+
+const pppangramsans = localFont({
+  src: [
+    {
+      path: '../public/fonts/PPPangramSans-Bold.otf',
+      weight: '700'
+    },
+  ],
+  variable: '--font-pppangramsans'
+})
 
 export default function RootLayout({
   children,
@@ -18,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${pppangramsans.variable}`}>{children}</body>
     </html>
   );
 }
